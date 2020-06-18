@@ -84,7 +84,7 @@ To Run the application;
   ```
   
 - To search for an index
-	localhost:2000/search/:param Request Sample: localhost:2000/search/Edgar
+	localhost:2000/search/:param/:page_size/:page_num Request Sample: localhost:2000/search/Edgar/10/1
 
 
 ## Optimizations Done
