@@ -4,19 +4,25 @@
   "description": "Test Project For Bibliu",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec"
+    "start": "nodemon app/index.js",
+    "test": "mocha -R spec | tee report.txt"
   },
   "author": "Sanni Fikayo",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.7.2",
     "body-parser": "^1.19.0",
     "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jszip": "^3.5.0",
+    "lodash": "^4.17.15",
     "method-override": "^3.0.0",
     "mocha": "^8.0.1",
     "mongoose": "^5.9.19",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "supertest": "^4.0.2",
+    "xml2js": "^0.4.23"
   }
 }

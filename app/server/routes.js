@@ -6,5 +6,7 @@ module.exports = (app)=>{
   app.use(router);
   router.get("/",(req,res)=>{res.end("TEST API");});
 
-  router.post("/save", maincontroller.save);
+  router.get("/search/:param", maincontroller.indexSearch);
+  router.post("/saveOne", maincontroller.saveOne);
+  router.post("/saveMany", maincontroller.saveDirectory);
 }

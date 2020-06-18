@@ -29,15 +29,20 @@ let express = require("express"), //require express
 
 //mongoose.connect('mongodb://localhost/wsf'); //offline test database
 
-//mongoose.connect(process.env.DB_HOST);
+mongoose.connect(process.env.DB_HOST);
 //mongoose.connect('mongodb+srv://<username>:<password>@cluster0-rxqbo.mongodb.net/test?retryWrites=true&w=majority');
-/**
+
 mongoose.connection.on("open", function() {
   //connect to mongoose
   console.log("Mongoose Connected."); //log connection message
 });
-**/
-app.listen(app.get("port"), () => {
+
+let server = app.listen(app.get("port"), () => {
   //listen to port
   console.log(app.get("port")); //log port being listened to
 });
+
+module.exports = {
+  server: server,
+  app: app
+}

@@ -1,0 +1,39 @@
+2000
+
+
+  Test App
+    Test saveOne with missing filename
+[0mPOST /saveOne [33m400[0m 22.372 ms - 54[0m
+400
+      ✓ returns status 400 and error filename missing (51ms)
+    Test saveMany with missing dirname
+[0mPOST /saveMany [33m400[0m 1.765 ms - 53[0m
+      ✓ returns status 400 and error dirname missing
+    Test saveOne with an entire directory path
+[0mPOST /saveOne [33m400[0m 1.146 ms - 57[0m
+      ✓ returns status 400 and error invalid file format
+    Test saveMany with a single rdf file
+[0mPOST /saveMany [31m500[0m 12.056 ms - 62[0m
+      ✓ returns status 500 and error Unable to scan directory
+    Test saveMany with empty directory
+[0mPOST /saveMany [33m400[0m 0.821 ms - 53[0m
+      ✓ returns status 400 with error Empty Directory
+
+  Test App
+    Test File reader for nonexistent file
+      ✓ accepts non existent url and returns callback with false
+    Test File Reader for invalid file types
+      ✓ accepts invalid file url and returns callback with false
+    Test File Reader for empty rdf data
+      ✓ accepts empty rdf file and returns callback with false
+    Test File Reader for invalid data file
+      ✓ accepts rdf without acceptable data and returns callbac with false
+    Test File Reader for valid rdf 
+/home/fikayomi/Documents/projects/TestProject/rdf-files/cache/epub/9987/pg9987.rdf
+null
+      ✓ accepts rdf without acceptable data and returns callbac with false (56ms)
+
+
+  10 passing (195ms)
+
+Mongoose Connected.
