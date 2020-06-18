@@ -51,7 +51,7 @@ let readFile = (fileURL, callback) =>{
                       publisher: "",
                       publication_date: "",
                       language: "",
-                      subject: "",
+                      subject: subjects,
                       license: ""
                     }
 
