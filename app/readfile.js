@@ -69,7 +69,7 @@ let readFile = (fileURL, callback) =>{
 
                     // publication_date availability checker
                     if(result.rdfRDF.pgtermsebook[0].dctermsissued !==undefined)
-                      Obj.date = result.rdfRDF.pgtermsebook[0].dctermsissued[0]._ //set crated date value
+                      Obj.publication_date = result.rdfRDF.pgtermsebook[0].dctermsissued[0]._ //set crated date value
 
                     // license availability checker
                     if(result.rdfRDF.pgtermsebook[0].dctermsrights !== undefined)
