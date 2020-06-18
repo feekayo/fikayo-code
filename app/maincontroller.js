@@ -81,14 +81,15 @@ module.exports = {
                     if(fn){
                       let filePath = dPath+"/"+fn
                       //console.log(filePath);
-                      let fileType = filePath.substr(fileURL.length - 4);//check file extension
+                      let fileType = filePath.substr(filePath.length - 4);//check file extension
 
-                      if(fileType === "rdf"){
+                      if(fileType === ".rdf"){
                         filePathsArray.push(filePath);//only add rdf files to filepaths array
                       }
-
-                      if(index===(files.length-1)){ //if all file paths have been collected
+                      //console.log(filePathsArray);
+                      if(index===(dirs.length-1)){ //if all file paths have been collected
                         console.log("DONE FETCHING DATA ARRAY")
+
                         let chunks = _.chunk(filePathsArray,100); //break file paths into chunks of 100
                         console.log(chunks); // log chunks
 
