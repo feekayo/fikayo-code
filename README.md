@@ -6,11 +6,11 @@ For Bibliu
 Sanni Oluwafikayo; 2020-6-18
 
 ## Achivements
-	- Save a single file
-	- Save a directory of files
-	- Uploaded all data
-	- Created a working index to search by Title,Author Name & Publication Date
-	- Uploaded all Files Smoothly
+- Save a single file
+- Save a directory of files
+- Uploaded all data
+- Created a working index to search by Title,Author Name & Publication Date
+- Uploaded all Files Smoothly
 
 ## How To Use
 
@@ -70,31 +70,28 @@ To Run the application;
 	headers:
 	
   ```
-  {
+	{
 		Content-Type:'application/json'	
 	}
   ```
 	
 	Request Sample:
-	```
-  {
+```
+  	{
 	    "filename" : "../rdf-files/cache/epub"
 	}
   ```
   
 - To search for an index
-	localhost:2000/search/:param
-	
-  Request Sample: localhost:2000/search/Edgar
+	localhost:2000/search/:param Request Sample: localhost:2000/search/Edgar
 
 
 ## Optimizations Done
-	- Multiple file reads and uploads Done in Chunks of 100 to avoid RAM over use
-	- Reloability Checks
-    - Existence Check
-    - File Format Check
-    - File Emptiness Check
-    - File Data Compatibility
-  - Unit tests all passed for the above checks
-  - All Files Uploaded in X ms
-    
+- Multiple file reads and uploads Done in Chunks of 100 to avoid RAM over use
+- File Existence Check
+- File Format Check
+- File Emptiness Check
+- File Data Compatibility
+- Unit tests all passed for the above checks
+- All Files Uploaded in X ms
+- Index Search Created for Title Author Name and Publication Date    
