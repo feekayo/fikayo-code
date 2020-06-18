@@ -93,5 +93,5 @@ To Run the application;
 - File Emptiness Check
 - File Data Compatibility
 - Unit tests all passed for the above checks
-- All Files Uploaded in X ms
+- All Files Uploaded in **1350443.8474849984** ms
 - Index Search Created for Title Author Name and Publication Date    
