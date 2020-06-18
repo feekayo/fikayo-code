@@ -15,6 +15,10 @@ module.exports = {
   indexSearch: (req, res)=>{ // index search function
     let agg = [{
       $match: { $text: { $search: req.params.param } } // aggregate $text search fot parameter
+    },{
+      $skip: req.params.page_size*req.params.page_num
+    },{
+      $limit: req.params.page_size
     }]
 
     db.aggregate(agg,(error,data)=>{ // find data
